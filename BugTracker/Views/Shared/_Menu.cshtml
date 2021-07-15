@@ -1,0 +1,12 @@
+﻿@helper GetButtonVisibility( string controller, string action = null )
+{
+    if ((string) ViewContext.RouteData.Values["controller"] == controller &&
+        ( action == null || (string) ViewContext.RouteData.Values["action"] == action ) )
+    {
+        <text> hidden ></text>
+    }
+    else
+    {
+        <text> visible </text>
+    }
+}
