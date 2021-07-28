@@ -56,7 +56,7 @@
     @RenderBody()
     <hr/>
     <footer>
-        <p>&copy; @DateTime.Now.2021 - BugTracker</p>
+        <p>&copy; @DateTime.Now.2021 - IssueTracker</p>
     </footer>
 </div>
 
@@ -65,6 +65,7 @@
 @RenderSection("scripts", required: false)
 <script src="~/Scripts/bootstrap-datepicker.min.js"></script>
 <script src="~/Scripts/jquery.validate.bootstrap.js"></script>
+<script src="~/Scripts/Chart.min.js"></script>
 <script>
     $('input.datepicker').datepicker({
         format: 'm/d/yyyy'

@@ -16,6 +16,7 @@ namespace BugTracker.Controllers
         public EntriesController()
         {
             _entriesRepository = new EntriesRepository();
+            List<Entry> entries = _entriesRepository.GetEntries();
         }
 
         public ActionResult Index()
@@ -23,12 +24,11 @@ namespace BugTracker.Controllers
             List<Entry> entries = _entriesRepository.GetEntries();
 
             // Calculate the total bugs.
-            int totalBugs = entries.Where(e => e.Exclude = false).Count();
+            int totalBugs = entries.Where(e => e.Exclude == false).Count();
             int numberOfActiveDays = entries.Select(e => e.Date).Distinct().Count();
 
             ViewBag.TotalBugs = totalBugs;
             ViewBag.AverageDailyBugs = (totalBugs / (double) numberOfActiveDays);
-
             return View(entries);
         }
 

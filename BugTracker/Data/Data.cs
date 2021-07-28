@@ -43,11 +43,11 @@ namespace BugTracker.Data
 
             var entries = new List<Entry>()
             {
-                new Entry(1, 2020, 8, 24, Bug.BugType.Typo, Entry.CurrentStatus.Open,
+                new Entry(1, 2021, 7, 20, Bug.BugType.Typo, Entry.CurrentStatus.Open,
                     Entry.PriorityLevel.Low, false, null),
-                new Entry(2, 2020, 9, 4, Bug.BugType.Functionality, Entry.CurrentStatus.Open,
+                new Entry(2, 2021, 7, 21, Bug.BugType.Functionality, Entry.CurrentStatus.Open,
                     Entry.PriorityLevel.High, false, null),
-                new Entry(3, 2020, 9, 3, Bug.BugType.Mathematical, Entry.CurrentStatus.Closed,
+                new Entry(3, 2021, 7, 22, Bug.BugType.Mathematical, Entry.CurrentStatus.Closed,
                     Entry.PriorityLevel.Medium, false, null)
             };
 
